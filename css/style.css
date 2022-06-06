@@ -90,6 +90,10 @@ body {
   height: 100%;
 }
 
+body.lock {
+  overflow: hidden;
+}
+
 .wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -106,7 +110,9 @@ body {
       -ms-flex: 0 1 auto;
           flex: 0 1 auto;
   background: #fff;
-  position: relative;
+  position: fixed;
+  z-index: 50;
+  width: 100%;
 }
 
 .header:before {
@@ -183,7 +189,7 @@ body {
           flex: 1 0 auto;
   -webkit-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
-  margin: 0 0 70px 0;
+  margin: 84px 0 70px 0;
 }
 
 .content__block {
@@ -380,7 +386,7 @@ body {
 }
 
 .about {
-  margin: 75px 0 0 0;
+  margin: 30px 0 0 0;
 }
 
 .about__mainblock-row {
@@ -388,7 +394,6 @@ body {
   display: -ms-flexbox;
   display: flex;
   max-width: 1000px;
-  margin: 0 auto;
 }
 
 .about__block-image img {
@@ -540,6 +545,9 @@ body {
     width: 100%;
     height: 4px;
     background: #000;
+    border-radius: 4px;
+    -webkit-transition: all 0.2s ease 0s;
+    transition: all 0.2s ease 0s;
   }
 
   .header__burger:before {
@@ -557,18 +565,39 @@ body {
     height: 4px;
     background: #000;
     top: 14px;
+    border-radius: 4px;
+  }
+
+  .header__burger.active span {
+    display: none;
+  }
+
+  .header__burger.active:before {
+    top: 14px;
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+    -webkit-transition: all 0.2s ease 0s;
+    transition: all 0.2s ease 0s;
+  }
+
+  .header__burger.active:after {
+    bottom: 14px;
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+    -webkit-transition: all 0.2s ease 0s;
+    transition: all 0.2s ease 0s;
   }
 
   .header__menu {
     position: absolute;
-    width: 50vw;
-    height: 100vh;
     background: #fff;
     top: 0;
-    left: -100%;
+    left: -150%;
     margin: 0 0 0 -20px;
-    -webkit-transition: all 0.3s ease 0s;
-    transition: all 0.3s ease 0s;
+    -webkit-transition: all 0.24s ease-out 0s;
+    transition: all 0.24s ease-out 0s;
+    width: 50vw;
+    height: 100vh;
   }
 }
 @media (max-width: 769px) and (max-width: 440px) {
@@ -592,8 +621,8 @@ body {
 }
 @media (max-width: 769px) {
   .content.blur {
-    -webkit-filter: blur(3px);
-            filter: blur(3px);
+    -webkit-filter: blur(6px);
+            filter: blur(6px);
     -webkit-transition: all 0.3s ease 0s;
     transition: all 0.3s ease 0s;
   }
