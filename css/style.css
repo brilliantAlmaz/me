@@ -673,7 +673,7 @@ body.lock {
 }
 @media (max-width: 769px) {
   .content__textblock {
-    top: 18vh;
+    top: 22vh;
   }
 }
 @media (max-width: 871px) {
