@@ -215,6 +215,7 @@ body.lock {
   display: block;
   -o-object-fit: cover;
      object-fit: cover;
+  margin: 83px 0 0 0;
 }
 
 .content__textblock {
