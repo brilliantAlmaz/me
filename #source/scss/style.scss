@@ -38,7 +38,7 @@ body.lock{
 .header {
 	flex: 0 1 auto;
 	background: #fff;
-	position: fixed;
+	position: absolute;
 	z-index:50;
 	width:100%;
 }
@@ -70,7 +70,9 @@ body.lock{
 .header__burger {
 	display: none;
 }
-.header__menu {}
+.header__menu {
+
+}
 .header__list {
 	width:350px;
 	display:flex;

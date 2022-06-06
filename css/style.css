@@ -110,7 +110,7 @@ body.lock {
       -ms-flex: 0 1 auto;
           flex: 0 1 auto;
   background: #fff;
-  position: fixed;
+  position: absolute;
   z-index: 50;
   width: 100%;
 }
