@@ -74,7 +74,7 @@ body.lock{
 
 }
 .header__list {
-	width:400px;
+	width:600px;
 	display:flex;
 	align-items:center;
 	li{
@@ -96,8 +96,18 @@ body.lock{
 		color:#000;
 		transition: all 0.3s ease 0s;
 	}
+		display: block;
+		width:110%;
+		padding:4px 0 0 0;
+		height:32px;	
+		border-radius: 4px;
+		color:#fff;
+		font-weight: 600;
+		background: #000;
+	}
 }
 .header__active-link{
+	display: none;
 	width:330px;
 	text-align: center;
 	color:#000;
@@ -543,16 +553,6 @@ body.lock{
 	}
 
 	//content
-	.header__active-link{
-		position:absolute;
-		top:22.5px;
-		left:0;
-		right:0;
-		max-width:330px;
-		margin-left:auto;
-		margin-right: auto;
-		text-align: center;
-	}
 	.header__link {
 		color:rgba(#000,0.6);
 		font-size: 30px;
@@ -566,6 +566,17 @@ body.lock{
 			font-size: 20px;
 			line-height: 23px;
 		}
+	}
+	.header__active-link{
+		display:block;
+		position:absolute;
+		top:22.5px;
+		left:0;
+		right:0;
+		max-width:330px;
+		margin-left:auto;
+		margin-right: auto;
+		text-align: center;
 	}
 	.header__active-link{
 		color:#000;
@@ -605,6 +616,9 @@ body.lock{
 	.header__list{
 		width:300px;
 	}
+	.header__link.active{
+		display:none;
+	}
 	.content__textblock{
 		top:22vh;
 	}
@@ -620,7 +634,7 @@ body.lock{
 .portfolio-home__item-image {
 	
 	img{
-		
+
 		@media(max-width:1144px){
 			width:400px;
 			height:225px;
