@@ -1,16 +1,21 @@
-$(document).ready(function() {
-	$('.header__burger').click(function(event) {
-		event.preventDefault();
-		$('.header__burger,.header__menu').toggleClass('active');
-		$('body').toggleClass('lock');
-		$('html').toggleClass('lock');
-		$('.content').toggleClass('blur');
-		$('.content').click(function(event) {
-			event.preventDefault();
-			$('.header__burger,.header__menu').removeClass('active');
-			$('body').removeClass('lock');
-			$('.content').removeClass('blur');
-		});
-		
-	});
-});
+
+const headerBurger =document.querySelector('.header__burger')
+const headerMenu =document.querySelector('.header__menu')
+const body =document.querySelector('body')
+const html =document.querySelector('html')
+const content =document.querySelector('.content')
+
+headerBurger.addEventListener('click', function(){
+	headerBurger.classList.toggle('active')
+	headerMenu.classList.toggle('active')
+	body.classList.toggle('lock');
+	html.classList.toggle('lock');
+	content.classList.toggle('blur')
+	content.addEventListener('click', function(){
+		headerBurger.classList.remove('active')
+		headerMenu.classList.remove('active')
+		body.classList.remove('lock');
+		html.classList.remove('lock');
+		content.classList.remove('blur')
+	})
+})
