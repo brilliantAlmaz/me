@@ -1,0 +1,210 @@
+<!doctype html>
+	<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="shortcut icon" href="img/favicon.ico">
+		<title>Главная</title>
+	</head>
+	<body>
+		<div class="wrapper">
+			<div class="header">
+				<div class="container">
+					<div class="header__body">
+						<div class="header__burger">
+							<span></span>
+						</div>
+						<div class="header__menu">
+							<ul class="header__list">
+								<li>
+									<a href="index.html" class="header__link active ">Главная</a>
+								</li>
+								<li>
+									<a href="about.html" class="header__link ">О себе</a>
+								</li>
+								<li>
+									<a href="portfolio.html" class="header__link ">Портфолио</a>
+								</li>
+								<li>
+									<a href="contacts.html" class="header__link">Контакты</a>
+								</li>
+							</ul>
+						</div>
+						<div class="header__active-link ru home" style=''>Главная</div>
+						
+					</div>
+				</div>
+			</div>
+			<div class="content" style='margin:0;'>
+				<div class="content__block">
+					<div class='content__bg'></div>
+					<div class="bg__btn">Нажми на меня</div>
+					<div class='gif'>
+						<img src="img/gif.gif" alt="">
+						<div class="content__textblock">
+							<div class="container">
+								<div class="content__quote">Я не уверен, есть ли у меня шанс, но это и не важно. Я всё равно должен выложиться на полную.</div>
+								<div class="content__origin">Наруто</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="content__title">
+					<div class="container">
+						Портфолио:
+					</div>
+				</div>
+				<div class="portfolio">
+					<div class="container">
+						<ul class="portfolio__block">
+							<li class="portfolio__item" id='html'> <!-- createX -->
+								<div class="portfolio__item-image">
+									<a class='portfolio__image-link' href='https://meowimhere.github.io/createX/'><img src="img/portfolio/createx.jpg" alt=""></a>
+								</div>
+								<div class="portfolio__item-textbox">
+									<a href='https://meowimhere.github.io/createX/' class="portfolio__item-textbox__title">createx</a>
+									<div class="portfolio__item-textbox__description">
+										<div class="portfolio__item-textbox__description-text">Многостраничный сайт createX. Desktop версия <br>
+											Все функции сайта написаны на JavaScript.
+										</div>
+										<ul class="portfolio__item-textbox__tag">
+											<li>
+												JS
+											</li>
+											<li>
+												CSS
+											</li>
+											<li>
+												HTML
+											</li>
+											<li>
+												Flexbox
+											</li>
+											
+											<li>
+												БЭМ
+											</li>
+										</ul>
+									</div>
+								</div>
+							</li>
+							<li  class="portfolio__item" id='html'> <!--Wooder -->
+								<div class="portfolio__item-image">
+									<a class='portfolio__image-link' href='https://meowimhere.github.io/wooder/'><img src="img/portfolio/wooder.jpg" alt=""></a>
+								</div>
+								<div class="portfolio__item-textbox">
+									<a href='https://meowimhere.github.io/wooder/' class="portfolio__item-textbox__title">Wooder</a>
+									<div class="portfolio__item-textbox__description">
+										<div class="portfolio__item-textbox__description-text">Использовал Flexbox. Вся HTML-верстка адаптивна для всех устройствах (ПК, Планшеты, Телефоны). <p> Макет был сделан <a href="https://www.behance.net/Olianishyn">Вячеславом Олянишиным</a></p></div>
+										<ul class="portfolio__item-textbox__tag">
+											<li>
+												Лендинг
+											</li>
+											<li>
+												Flexbox
+											</li>
+											<li>
+												Адаптив
+											</li>
+											<li>
+												CSS
+											</li>
+											<li>
+												HTML
+											</li>
+											<li>
+												БЭМ
+											</li>
+										</ul>
+									</div>
+								</div>
+							</li>
+							<li class="portfolio__item" id='html'> <!--tourism -->
+								<div class="portfolio__item-image">
+									<a class='portfolio__image-link' href='https://meowimhere.github.io/tourism/'><img src="img/portfolio/tourism.jpg" alt=""></a>
+								</div>
+								<div class="portfolio__item-textbox">
+									<a href='https://meowimhere.github.io/tourism/' class="portfolio__item-textbox__title">Tourism</a>
+									<div class="portfolio__item-textbox__description">
+										<div class="portfolio__item-textbox__description-text">Верстка сайта туризма. Интересный дизайн с блоками картинок. Flexbox позволил воссоздать данный блок.
+											<p>Сайт адаптирован для всех устройств.</p>
+										</div>
+										<ul class="portfolio__item-textbox__tag">
+											<li>
+												Лендинг
+											</li>
+											<li>
+												Flexbox
+											</li>
+											<li>
+												CSS
+											</li>
+											<li>
+												HTML
+											</li>
+											<li>
+												БЭМ
+											</li>
+										</ul>
+									</div>
+								</div>
+							</li>
+						</ul>
+						<a href="portfolio.html" class="portfolio__link">Посмотреть другие работы <img src="img/arrow.svg" alt=""></a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="footer">
+			<div class="container">
+				<div class="footer__block">
+					<div class="footer__author">Алмаз Тухватулин</div>
+					<div class="footer__year">2022</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="js/script.js"></script>
+	<script>
+		const downBtn = document.querySelector('.bg__btn');
+		const bg =document.querySelector('.content__block');
+		downBtn.addEventListener('click', function(){
+			window.scrollTo({
+				top: window.innerHeight,
+				behavior: 'smooth',
+			});
+			portfolioItems.forEach(function(i){
+				i.style.left='0'
+			})
+		})
+		function getDocumentScroll() {
+			var scrollHeight = Math.max(
+				document.body.scrollHeight, document.documentElement.scrollHeight,
+				document.body.offsetHeight, document.documentElement.offsetHeight,
+				document.body.clientHeight, document.documentElement.clientHeight
+				);
+			return pageYOffset + document.documentElement.clientHeight
+		}
+		//let sum = bg.clientHeight;
+		window.onscroll = () => {
+			//console.log(portfolioItems[0].clientHeight)
+			if (getDocumentScroll() > bg.clientHeight){
+				portfolioItems.forEach(i => i.style.left='0');
+			}
+		}
+
+		const portfolioItems = document.querySelectorAll('.portfolio__item');
+		for (let i=0; i< portfolioItems.length; i++){
+			if (i%2){
+				portfolioItems[i].style.left='150vw';
+			}
+			else{
+				portfolioItems[i].style.left='-150vw';
+			}
+			//console.log(portfolioItems[i].clientHeight)
+		}
+		//console.log(downBtn.pageOffsetTop)
+	</script>
+</body>
+</html>
