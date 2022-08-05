@@ -484,6 +484,7 @@ body.lock{
 	gap:20px;
 }
 .portfolio__selector-row-item {
+	flex: 1 1 25%;
 	cursor: pointer;
 	transition:all 0.3s ease 0s;
 	display: block;
