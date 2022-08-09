@@ -404,7 +404,7 @@ body.lock {
 .portfolio__link {
   position: relative;
   display: block;
-  margin: 100px auto 200px;
+  margin: 100px auto 0px;
   max-width: 320px;
   font-weight: 600;
   color: rgba(0, 0, 0, 0.6);
