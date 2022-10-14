@@ -410,7 +410,7 @@ html.lock {
 .portfolio__link img {
   position: absolute;
   top: 2px;
-  right: -5px;
+  right: -10px;
   display: block;
   width: 17px;
   -webkit-transform: rotate(45deg);
@@ -492,7 +492,7 @@ html.lock {
 }
 
 .about__desc-item .portfolio__link {
-  margin: 5px 0 0 8px;
+  margin: 40px 0 0 8px;
   padding: 0;
   max-width: 320px;
   font-size: 28px;
@@ -500,6 +500,7 @@ html.lock {
   font-weight: 600;
 }
 .about__desc-item .portfolio__link img {
+  margin: 0 -20px 0 0;
   width: 28px;
   height: 28px;
 }

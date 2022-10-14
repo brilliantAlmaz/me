@@ -293,7 +293,7 @@ html.lock{
 	img{
 		position:absolute;
 		top:2px;
-		right:-5px;
+		right:-10px;
 		display: block;
 		width:17px;
 		transform:rotate(45deg);
@@ -373,13 +373,14 @@ html.lock{
 }
 .about__desc-item {
 	.portfolio__link{
-		margin: 5px 0 0 8px;
+		margin: 40px 0 0 8px;
 		padding:0;
 		max-width:320px;
 		font-size: 28px;
 		font-weight: 400;
 		font-weight: 600;
 		img{
+			margin: 0 -20px 0 0;
 			width:28px;
 			height:28px;
 		}
