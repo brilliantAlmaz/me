@@ -213,7 +213,9 @@
 
 		const downBtn = document.querySelector('.bg__btn');
 		downBtn.addEventListener('click', function(){
+			document.querySelector('body').style.overflowX='visible';
 			scrollToTargetAdjusted('portfolio');
+
 			portfolioItems.forEach(i => i.style.left='0');
 		})
 		function onScreen (el) { //if the element is on the screen
@@ -231,7 +233,6 @@
 			var headerOffset = 83;
 			var elementPosition = element.getBoundingClientRect().top;
 			var offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-
 			window.scrollTo({
 				top: offsetPosition,
 				behavior: "smooth"
