@@ -72,13 +72,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* Regular */
-body {
+html {
   font-family: "Montserrat";
   overflow-x: hidden;
   height: 100%;
 }
 
-body.lock {
+html.lock {
   overflow: hidden;
 }
 
@@ -94,22 +94,16 @@ body.lock {
 }
 
 .header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 83px;
   -webkit-box-flex: 0;
       -ms-flex: 0 1 auto;
           flex: 0 1 auto;
   background: #fff;
-  position: absolute;
   z-index: 50;
-  width: 100%;
-}
-
-.header:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
 }
 
 .container {
@@ -388,6 +382,7 @@ body.lock {
   width: 100%;
   color: #656565;
   font-size: 16px;
+  line-height: 120%;
 }
 .portfolio__item-textbox__tag li {
   margin: 0 20px 0 0;
@@ -941,7 +936,7 @@ body.lock {
 }
 @media (max-width: 769px) {
   .header__list {
-    width: 300px;
+    width: 150px;
   }
 }
 @media (max-width: 769px) {

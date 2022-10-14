@@ -8,13 +8,13 @@ const content =document.querySelector('.content')
 headerBurger.addEventListener('click', function(){
 	headerBurger.classList.toggle('active')
 	headerMenu.classList.toggle('active')
-	body.classList.toggle('lock');
+	//body.classList.toggle('lock');
 	html.classList.toggle('lock');
 	content.classList.toggle('blur')
 	content.addEventListener('click', function(){
 		headerBurger.classList.remove('active')
 		headerMenu.classList.remove('active')
-		body.classList.remove('lock');
+		//body.classList.remove('lock');
 		html.classList.remove('lock');
 		content.classList.remove('blur')
 	})
