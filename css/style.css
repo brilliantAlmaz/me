@@ -72,6 +72,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* Regular */
+@media (max-width: 769px) {
+  body {
+    overflow-x: hidden;
+  }
+}
 html {
   font-family: "Montserrat";
   overflow-x: hidden;
@@ -300,7 +305,16 @@ html.lock {
           flex-direction: row-reverse;
 }
 
+.relative {
+  position: relative;
+  width: 100vw;
+  height: 300px;
+}
+
 .portfolio__item {
+  position: absolute;
+  top: 0;
+  left: 0;
   margin: 75px 0 0 0;
   display: -webkit-box;
   display: -ms-flexbox;

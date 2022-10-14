@@ -55,10 +55,10 @@
 						Портфолио:
 					</div>
 				</div>
-				<div class="portfolio">
+				<div class="portfolio"  >
 					<div class="container">
 						<ul class="portfolio__block">
-							<li class="portfolio__item"  id='project'> <!--Billy Herrington-->
+							<li class="portfolio__item"  > <!--Billy Herrington-->
 								<div class="portfolio__item-image">
 									<a class='portfolio__image-link' href='https://brilliantalmaz.github.io/BH/'><img src="img/portfolio/BH.png" alt=""></a>
 								</div>
@@ -185,29 +185,7 @@
 			</div>
 		</div>
 	</div>
-	<script src="js/script.js"></script>
 	<script>
-		const downBtn = document.querySelector('.bg__btn');
-		const bg =document.querySelector('.content__block');
-		downBtn.addEventListener('click', function(){
-			scrollToTargetAdjusted('portfolio')
-		})
-		function getDocumentScroll() {
-			var scrollHeight = Math.max(
-				document.body.scrollHeight, document.documentElement.scrollHeight,
-				document.body.offsetHeight, document.documentElement.offsetHeight,
-				document.body.clientHeight, document.documentElement.clientHeight
-				);
-			return pageYOffset + document.documentElement.clientHeight
-		}
-		//let sum = bg.clientHeight;
-		window.onscroll = () => {
-			//console.log(portfolioItems[0].clientHeight)
-			if (getDocumentScroll() > bg.clientHeight){
-				portfolioItems.forEach(i => i.style.left='0');
-			}
-		}
-
 		const portfolioItems = document.querySelectorAll('.portfolio__item');
 		for (let i=0; i< portfolioItems.length; i++){
 			if (i%2){
@@ -216,7 +194,37 @@
 			else{
 				portfolioItems[i].style.left='-150vw';
 			}
-			//console.log(portfolioItems[i].clientHeight)
+		}
+		const portfolio = document.querySelector('#portfolio');
+		document.addEventListener('touchmove', function(){
+			if (onScreen(portfolio)){
+				portfolioItems.forEach(i => i.style.left='0');
+			}
+			console.log(onScreen(portfolio))
+		})
+		window.addEventListener('scroll', function(){
+			if (onScreen(portfolio)){
+				portfolioItems.forEach(i => i.style.left='0');
+			}
+			console.log(onScreen(portfolio))
+		})
+		
+
+
+		const downBtn = document.querySelector('.bg__btn');
+		downBtn.addEventListener('click', function(){
+			scrollToTargetAdjusted('portfolio');
+			portfolioItems.forEach(i => i.style.left='0');
+		})
+		function onScreen (el) { //if the element is on the screen
+			var rect = el.getBoundingClientRect();
+
+			return (
+				rect.top >= 0 &&
+				rect.left >= 0 &&
+				rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) && /* or $(window).height() */
+				rect.right <= (window.innerWidth || document.documentElement.clientWidth) /* or $(window).width() */
+				);
 		}
 		function scrollToTargetAdjusted(el){
 			var element = document.getElementById(el);
@@ -231,5 +239,6 @@
 		}
 		//console.log(downBtn.pageOffsetTop)
 	</script>
+	<script src="js/script.js"></script>
 </body>
 </html>

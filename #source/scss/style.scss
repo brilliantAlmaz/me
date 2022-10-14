@@ -2,6 +2,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
 /* Regular */
 
+@media (max-width:769px){
+	body{
+		overflow-x:hidden;
+	}
+}
 
 html{
 	font-family: 'Montserrat';
@@ -198,7 +203,15 @@ html.lock{
 	}
 
 }
+.relative{
+	position: relative;
+	width:100vw;
+	height:300px;
+}
 .portfolio__item {
+	position: absolute;
+	top:0;
+	left:0;
 	margin:75px 0 0 0;
 	display:flex;
 	justify-content:space-around;
